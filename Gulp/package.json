@@ -1,0 +1,11 @@
+{
+  "name": "my_package",
+  "version": "1.0.0",
+  "dependencies": {
+    "my_dep": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uncss": "^1.0.6"
+  }
+}
