@@ -1,130 +1,47 @@
+<!-- 2. Create a to-do list app. Each to-do has a title and a description.
+
+ The top of the document starts with a “add to-do form”. 
+
+ When you add an item it appears in the list but only shows the title.
+
+  Store items in an array, each item is an object. 
+
+  You can go up and down with the arrow keys in the list and the current item is highlighted. Track highlighted item in an array. 
+
+  When Enter is hit on an item it should expend and show the description. 
+
+  Items have an X to delete. Hitting backspace should also delete. 
+
+  The list object should also be stored in and loaded from localStorage. (6 hours)
+ -->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>JS</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://daneden.github.io/animate.css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-	<style type="text/css" media="screen">
-		body {
-  font-family: "Roboto", "Arial";
-  background: #4cb8c4;
-  background: -webkit-linear-gradient(to right, #4cb8c4, #3cd3ad);
-  background: linear-gradient(to right, #4cb8c4, #3cd3ad);
-}
-
-h1 {
-  font-size: 30px;
-  font-weight: 100;
-  margin: 0;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  border-radius: 5px 5px 0 0;
-  background: rgb(38, 216, 210);
-}
-
-input {
-  font-size: 18px;
-  font-weight: 100;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 13px 13px 13px 20px;
-  color: rgb(38, 216, 210);
-  border: 3px solid rgba(0, 0, 0, 0);
-  background: #f7f7f7;
-}
-
-input:hover {
-  border: 3px solid rgb(38, 216, 210);
-  background: #ffffff;
-}
-
-input:focus {
-  outline: none;
-}
-
-ul {
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  line-height: 40px;
-  height: 40px;
-  padding-left: 20px;
-  background: #ffffff;
-}
-
-li:nth-child(2n) {
-  background: #f7f7f7;
-}
-
-li:hover span {
-  width: 40px;
-  opacity: 1;
-}
-
-span {
-  display: inline-block;
-  float: right;
-  width: 0;
-  height: 40px;
-  -webkit-transition: .2s linear;
-  -moz-transition: .2s linear;
-  -ms-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
-  text-align: center;
-  opacity: 0;
-  color: #ffffff;
-  background: #e74c3c;
-}
-
-#container {
-  width: 300px;
-  margin: 100px auto;
-  padding-bottom: 5px;
-  border-radius: 5px;
-  background: #f7f7f7;
-  box-shadow: 0 0 50px 10px rgba(0, 0, 0, .1);
-}
-
-.completed {
-  color: rgb(220, 220, 220);
-}
-
-.fa-angle-up {
-  line-height: 40px;
-  vertical-align: middle;
-}
-
-.fa-square-o,
-.fa-check-square-o {
-  line-height: 18px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-	</style>
 
 </head>
 <body>  
-     
-   <h1>To Do list</h1>
+  
 
   <div id="container">
-    <h1>To-do List <i class="fa fa-angle-up pull-right"></i></h1>
-    <input type="text" placeholder="Add new to-do...">
+    <h1>To Do Form</h1>
+    <input type="text">
+    
     <ul>
       
     </ul>
   </div>
 
 
-
+<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
+
