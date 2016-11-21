@@ -1,24 +1,52 @@
-function RockPaperScissors (){ 
+// function RockPaperScissors (){ 
 
-    var options = ["rock", "scissors", "paper"];
-    var computerChoice = options[ Math.floor(Math.random() * 3)];
-    alert('Computer Chooses ' + computerChoice);
-    var playerChoice = document.getElementById("playerChoice").value;
+//     var options = ["rock", "scissors", "paper"];
+//     var computerChoice = options[ Math.floor(Math.random() * 3)];
+//     alert('Computer Chooses ' + computerChoice);
+//     var playerChoice = document.getElementById("playerChoice").value;
 
-    var output = document.getElementById('output');
+//     var output = document.getElementById('output');
 
-    var results = {
-        'scissors':{'paper':   "you win!",   'rock':    'you lose...'},
-        'rock':    {'paper':   'you lose...','scissors':'you win!' },
-        'paper':   {'scissors':'you lose...','rock':    'you win!'}
-    }
-    if(playerChoice == computerChoice){
-        alert("It's a tie!");
-    }else{
-        output.innerHTML = results[playerChoice][computerChoice];
-    }  
+//     var results = {
+//         'scissors':{'paper':   "you win!",   'rock':    'you lose...'},
+//         'rock':    {'paper':   'you lose...','scissors':'you win!' },
+//         'paper':   {'scissors':'you lose...','rock':    'you win!'}
+//     }
+//     if(playerChoice == computerChoice){
+//         alert("It's a tie!");
+//     }else{
+//         output.innerHTML = results[playerChoice][computerChoice];
+//     }
 
-};
+        //return false;  
+
+// };
+
+
+function Choice(choice){
+  this.choice = choice;
+
+  this.getChoice = function(){
+    return this.choice;
+  }
+
+  this.canBeat = function(obj){
+    var beat = [];
+    this.beat.push(obj);
+  }
+
+}
+
+
+var userChoice = new Choice('Rock');
+userChoice.getChoice();
+
+
+var computerChoice = new Choice('paper');
+computerChoice.getChoice();
+
+
+//http://stackoverflow.com/questions/21796143/how-to-decide-a-winner-in-rock-paper-scissors
 
 
 // function RockPaperScissors (){ 
