@@ -23,27 +23,45 @@
 // };
 
 
-function Choice(choice){
-  this.choice = choice;
+// function Choice(choice){
+//   this.choice = choice;
 
-  this.getChoice = function(){
-    return this.choice;
-  }
+//   this.getChoice = function(){
+//     return this.choice;
+//   }
 
-  this.canBeat = function(obj){
-    var beat = [];
-    this.beat.push(obj);
-  }
+//   this.canBeat = function(obj){
+//     var beat = [];
+//     this.beat.push(obj);
+//   }
 
+// }
+
+
+// var userChoice = new Choice('Rock');
+// userChoice.getChoice();
+
+
+// var computerChoice = new Choice('paper');
+// computerChoice.getChoice();
+
+
+function Choice(choiceName,beats){
+    this.choiceName = choiceName;
+    this.beats = beats; 
+}
+
+Choice.prototype.canBeat = function(choice){
+    return this.choiceName !== choice.beats && this.choiceName !== choice.choiceName;
 }
 
 
-var userChoice = new Choice('Rock');
-userChoice.getChoice();
+var rock = new Choice("rock", "scissors");
+var paper = new Choice("paper", "rock");
+var scissors = new Choice("scissors", "paper");
 
 
-var computerChoice = new Choice('paper');
-computerChoice.getChoice();
+rock.canBeat(paper); 
 
 
 //http://stackoverflow.com/questions/21796143/how-to-decide-a-winner-in-rock-paper-scissors
