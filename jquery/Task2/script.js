@@ -1,12 +1,35 @@
 $(function() {
 
-  var list = [];
-
   function writeData() {
     localStorage.setItem('ToDos', JSON.stringify(list));
   }
 
-  var updatedlist = JSON.parse(localStorage.getItem('ToDos'));
+  function readData(){
+    var itemList = localStorage.getItem('ToDos');
+    return JSON.parse(itemList);
+  }
+
+  function removeItem(item){
+    localStorage.removeItem(item);
+  }
+
+  function activeItem(){
+    var todos = readData();
+    for(var key in todos){
+      return todos[key];
+    }
+  }
+
+
+
+
+
+  var list = [];
+
+  
+
+  var updatedlist = readData();
+
 
   for (var key in updatedlist){ //reading from the list
     var todos = updatedlist[key];
@@ -37,6 +60,8 @@ $(function() {
   $('ul').on('click', 'span', function(event) {
     $(this).parent().fadeOut('400', function() {
       $(event.target).parent();
+      var activeItem = activeItem();
+      
       $(this).remove();
       console.log(this.options[event.target.selectedIndex].text);
     });

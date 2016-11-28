@@ -75,6 +75,4 @@ React
 
 Final project: Create a simple black jack game (create cards from sprite, add a welcome screen component with a play button, on the play screen draw the first two cards for the player randomly, calculate values. Add a continue and a stop button. Stop will evaluate the game and add your value to a high score counter. Play will give you a new card. The game needs to happen on a 3D table and the cards should fly off to the table from a card deck. Use ES6 and React for this.) (20 hours)
 
-This email (including any attachments) is confidential, protected by copyright and/or other intellectual property rights and may be privileged. If you have received it in error, please notify the sender immediately before deleting the email from your device. Do not use, copy or disclose the information contained in this message or in any attachment. We accept no responsibility for malware that we may have unintentionally transmitted to you within this email. Those communicating with us by email will be deemed to have consented to us intercepting and monitoring those communications. Mice and Dice Ltd is registered in England and Wales, with company registration number 05021910 and VAT registered number 853750806. The registered office is at 10 Piccadilly, London, W1J 0DD.
-
 
