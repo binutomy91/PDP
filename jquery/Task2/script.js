@@ -34,7 +34,7 @@ $(function() {
   for (var key in updatedlist){ //reading from the list
     var todos = updatedlist[key];
 
-    $('ul').append('<li><span class=delete>X</span>' + todos["title"] + '</li>');
+    $('ul').append('<li>' + todos["title"] + '</li>');
     $("ul").children().first().addClass('active');
     list.push(todos);
 
@@ -47,7 +47,7 @@ $(function() {
 
       writeData();
       $(this).val('');
-      $('ul').append('<li><span class=delete>X</span>' + newTodo + '</li>');
+      $('ul').append('<li>' + newTodo + '</li>');
       $("ul").children().first().addClass('active');
     }
   });
