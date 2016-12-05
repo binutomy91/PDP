@@ -1,6 +1,6 @@
 $(function() {
 
-  function writeData() {
+  function writeData(list) {
     localStorage.setItem('ToDos', JSON.stringify(list));
   }
 
@@ -10,7 +10,26 @@ $(function() {
   }
 
   function removeItem(item){
-    localStorage.removeItem(item);
+
+    var currentList = JSON.parse(localStorage.getItem('ToDos'));
+
+    for (var key in currentList) {
+      var current = currentList[key];
+      if(current.title == item.innerHTML){
+        currentList.splice(key, 1);
+        writeData(currentList);
+      }
+    };
+
+    
+
+
+    for (var obj in localStorage) {
+      if (localStorage.hasOwnProperty(obj) && obj == "ToDos") {
+        //localStorage.removeItem(obj);
+        //JSON.parse(localStorage.removeItem(obj))[item.innerText]
+      }
+    }
   }
 
   function activeItem(){
@@ -53,6 +72,7 @@ $(function() {
   });
 
   $('ul').on('click', 'li', function() {
+    removeItem(this);
     $(this).toggleClass('completed');
     $(this).find('i:last').toggleClass('fa-square-o fa-check-square-o');
   });
