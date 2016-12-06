@@ -20,16 +20,6 @@ $(function() {
         writeData(currentList);
       }
     };
-
-    
-
-
-    for (var obj in localStorage) {
-      if (localStorage.hasOwnProperty(obj) && obj == "ToDos") {
-        //localStorage.removeItem(obj);
-        //JSON.parse(localStorage.removeItem(obj))[item.innerText]
-      }
-    }
   }
 
   function activeItem(){
@@ -39,14 +29,7 @@ $(function() {
     }
   }
 
-
-
-
-
   var list = [];
-
-  
-
   var updatedlist = readData();
 
 
@@ -56,15 +39,15 @@ $(function() {
     $('ul').append('<li>' + todos["title"] + '</li>');
     $("ul").children().first().addClass('active');
     list.push(todos);
-
   }
+
 
   $('input[type="text"]').keypress(function(event) {
     if (event.which == 13) {
       var newTodo = $(this).val();
       list.push({title:newTodo}) //push to list
 
-      writeData();
+      writeData(list);
       $(this).val('');
       $('ul').append('<li>' + newTodo + '</li>');
       $("ul").children().first().addClass('active');
@@ -118,25 +101,18 @@ $(function() {
         d = $(d[d.length - 1]);
         d.addClass('active');
       }
+    }
+
+
+    if(e.keyCode == 8){
+
     } 
   });
 
-    
-
-      
-
-
-
-
-
-
-
 
   });
 
-
-
-
+  
 
 
 
