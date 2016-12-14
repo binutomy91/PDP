@@ -30,7 +30,7 @@ $(document).ready(function() {
     lat = loc.lat;
     $.getJSON('http://api.openweathermap.org/data/2.5/weather?APPID=' + appID + '&lat=' + lat + '&lon=' + lon+ '&units=metric', function(weather) {
       console.log(weather)
-      $('#data').html(weather.main.temp);
+      $('#data').html("Your Current Location is "+ weather.name + ' Your Temperature is ' + weather.main.temp + ' &#8451;');
     });
 
   });
