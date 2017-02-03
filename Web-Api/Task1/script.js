@@ -4,17 +4,20 @@ navigator.getBattery().then(function(battery) {
   var level = (battery.level * 100);
   var charging = battery.charging;
 
+  console.log(battery);
+
   function getBatteryInfo (){
-    if( level > 50) {
-      document.body.style.backgroundColor = "green";
-    } else if(level < 50 && level > 20 ){
-      document.body.style.backgroundColor = "amber";
-    } else if(level < 20){
+    if(level < 20){
       document.body.style.backgroundColor = "red";
+    }else if (level < 60){
+      document.body.style.backgroundColor = "orange";
+    }else{
+      document.body.style.backgroundColor = "green";
     }
+
     if(battery.charging){
-      alert('your device is charging');
-      alert('chargingTime: '+ battery.chargingTime) 
+      console.log('your device is charging');
+      console.log('chargingTime: '+ battery.chargingTime) 
     }
   }
 
