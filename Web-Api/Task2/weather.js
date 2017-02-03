@@ -1,28 +1,16 @@
 var geoSuccess = function(position) {
 
     var date = new Date();
-    var month = date.getMonth();
+    var month = date.getMonth()+1;
 
     var lat = Math.round(position.coords.latitude);
     var lon = Math.round(position.coords.longitude);
 
     var seasons = {
-      summer:{
-        start:5, 
-        end: 8
-      },
-      autumn:{
-        start:8, 
-        end: 10
-      },
-      winter:{
-        start:10, 
-        end: 2
-      },
-      spring:{
-        start: 2,
-        end: 5
-      }
+      summer:[6,7,8],
+      autumn:[9,10,11],
+      winter:[12,1,2],
+      spring:[3,4,5]
     };
 
 
