@@ -19,8 +19,8 @@ function randomNumber(){
 
 $(document).ready(
 	$( ".draw" ).click(function() {
-		var numbers  = $();
-		$(numbers).addClass('');
+		var numbers  = $('.wrapper div');
+		$(numbers).addClass('animation');
 
 		for (var i = 0; i <= 4; i++) {
 		    var drawnumber = numbers[i];
