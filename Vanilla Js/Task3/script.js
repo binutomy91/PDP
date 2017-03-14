@@ -5,6 +5,18 @@ function randomNumber(){
 	return Math.floor((Math.random() * 51));
 };
 
+
+// function drawClicked() {
+// 	var numbers = document.getElementsByClassName('wrapper')[0].children;
+// 	if (numbers[0].classList == 'animation') {
+// 		console.log('hello');
+// 	} else {
+// 		numbers.className += ' ' + 'animation';
+// 	}
+//
+// };
+
+
 $(document).ready(
 	$( ".draw" ).click(function() {
 		var numbers  = $('.wrapper div');
