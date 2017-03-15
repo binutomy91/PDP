@@ -4,13 +4,13 @@
 
 
 (function (){
-	
+
 	function drawClicked() {
 		let numbers = document.querySelectorAll(".wrapper div");
 		numbers.forEach ( number => {
 			if(!number.classList.contains("animation")) {
 					number.className += ' ' + 'animation';
-					number.innerHTML = Math.floor((Math.random() * 51));
+					number.innerHTML = Math.floor((Math.random() * 51) + 1);
 			}
 		});
 	}
@@ -18,7 +18,6 @@
 	drawBtn.addEventListener("click", drawClicked);
 
 })();
-
 
 
 
