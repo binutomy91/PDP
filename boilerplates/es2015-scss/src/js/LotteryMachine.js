@@ -4,19 +4,14 @@ class LotteryMachine {
 		Object.assign(this, settings);
 	}
 
-	drawNumbers(){
+	drawNumbers() {
 		let numbers = [];
 
 		for (var i = 0; i < this.total ; i++) {
-			const randomNumber =  Math.floor(Math.random() * (this.max - this.min) + this.min);
-			let newNumber = null;
-			console.log("randomNumber Generated" + randomNumber);
+			const randomNumber =  Math.floor(Math.random() * (this.max) + this.min);
 			do {
-				console.log("While loop "+ randomNumber);
-
-				newNumber = randomNumber;
 				numbers.push(randomNumber);
-			} while (!numbers.includes(newNumber));
+			} while (!numbers.includes(randomNumber));
 
 		}
 

@@ -10,7 +10,7 @@
 		numbers.forEach ( number => {
 			if(!number.classList.contains("animation")) {
 					number.className += ' ' + 'animation';
-					number.innerHTML = Math.floor((Math.random() * 51) + 1);
+					number.innerHTML = Math.floor((Math.random() * 50) + 1);
 			}
 		});
 	}

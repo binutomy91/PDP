@@ -22,15 +22,10 @@ var LotteryMachine = function () {
 			var numbers = [];
 
 			for (var i = 0; i < this.total; i++) {
-				var randomNumber = Math.floor(Math.random() * (this.max - this.min) + this.min);
-				var newNumber = null;
-				console.log("randomNumber Generated" + randomNumber);
+				var randomNumber = Math.floor(Math.random() * this.max + this.min);
 				do {
-					console.log("While loop " + randomNumber);
-
-					newNumber = randomNumber;
 					numbers.push(randomNumber);
-				} while (!numbers.includes(newNumber));
+				} while (!numbers.includes(randomNumber));
 			}
 
 			return numbers;
@@ -55,7 +50,7 @@ function init() {
 	var currentDraw = new _LotteryMachine2.default({
 		min: 1,
 		max: 50,
-		total: 5
+		total: 6
 	});
 
 	currentDraw.drawNumbers();

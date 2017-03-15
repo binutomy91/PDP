@@ -1,4 +1,11 @@
-var deadline = new Date("2016-08-12");
+var deadline = new Date("2017-03-17");
+
+
+var d = new Date();
+var currentTime = d.getTime();
+var currentDay = d.getDay();
+var targetDay = 5;
+
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
