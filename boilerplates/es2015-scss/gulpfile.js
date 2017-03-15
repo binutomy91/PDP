@@ -22,7 +22,7 @@ gulp.task("browserify", function() {
 });
 
 gulp.task("copy", function() {
-	
+
 	// Copy all HTML files
 	copy({
 		from: config.source + "*.html",
