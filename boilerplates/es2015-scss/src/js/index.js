@@ -1,14 +1,5 @@
-import LotteryMachine from "./LotteryMachine.js";
+import Person from "./Person.js";
 
-function init() {
-	const currentDraw = new LotteryMachine({
-		min: 1,
-		max: 50,
-		total: 6
-	});
+let john = new Person('John');
 
-	currentDraw.drawNumbers();
-
-}
-
-window.onload = init;
+console.log( john.getName() );

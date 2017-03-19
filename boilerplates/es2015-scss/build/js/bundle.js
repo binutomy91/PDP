@@ -9,53 +9,36 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var LotteryMachine = function () {
-	function LotteryMachine(settings) {
-		_classCallCheck(this, LotteryMachine);
+var Person = function () {
+	function Person(name) {
+		_classCallCheck(this, Person);
 
-		Object.assign(this, settings);
+		this.name = name;
 	}
 
-	_createClass(LotteryMachine, [{
-		key: "drawNumbers",
-		value: function drawNumbers() {
-			var numbers = [];
-
-			for (var i = 0; i < this.total; i++) {
-				var randomNumber = Math.floor(Math.random() * this.max + this.min);
-				do {
-					numbers.push(randomNumber);
-				} while (!numbers.includes(randomNumber));
-			}
-
-			return numbers;
+	_createClass(Person, [{
+		key: "getName",
+		value: function getName() {
+			return this.name;
 		}
 	}]);
 
-	return LotteryMachine;
+	return Person;
 }();
 
-exports.default = LotteryMachine;
+exports.default = Person;
 
 },{}],2:[function(require,module,exports){
 "use strict";
 
-var _LotteryMachine = require("./LotteryMachine.js");
+var _Person = require("./Person.js");
 
-var _LotteryMachine2 = _interopRequireDefault(_LotteryMachine);
+var _Person2 = _interopRequireDefault(_Person);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function init() {
-	var currentDraw = new _LotteryMachine2.default({
-		min: 1,
-		max: 50,
-		total: 6
-	});
+var john = new _Person2.default('John');
 
-	currentDraw.drawNumbers();
-}
+console.log(john.getName());
 
-window.onload = init;
-
-},{"./LotteryMachine.js":1}]},{},[2]);
+},{"./Person.js":1}]},{},[2]);

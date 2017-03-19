@@ -13,8 +13,8 @@ function copy(settings) {
 }
 
 gulp.task("browserify", function() {
-	return browserify(config.source + "jsx/index.jsx")
-		.transform("babelify", {presets: ['es2015', 'react']})
+	return browserify(config.source + "js/index.js")
+		.transform("babelify", {presets: ['es2015']})
 		.bundle()
 		.pipe(source('bundle.js'))
 		.pipe(gulp.dest(config.build + "js/"))
@@ -22,7 +22,7 @@ gulp.task("browserify", function() {
 });
 
 gulp.task("copy", function() {
-	
+
 	// Copy all HTML files
 	copy({
 		from: config.source + "*.html",
@@ -49,7 +49,7 @@ gulp.task("sass", function() {
 gulp.task("watch", ["sass", "copy", "browserify"], function() {
 	gulp.watch(config.source + "scss/**/*", ["sass"]);
 	gulp.watch([config.source + "images/**/*", ".src/*.html"], ["copy"]);
-	gulp.watch(config.source + "jsx/**/*", ["browserify"]);
+	gulp.watch(config.source + "js/**/*", ["browserify"]);
 });
 
 gulp.task("connect", function() {

@@ -9,21 +9,21 @@ request.onload = function() {
    	var resultData = [];
    	// var finalD = {};
 
-   	var headerProps = [city, name, ...]
+   // 	var headerProps = [city, name, ...]
 
     var dataArray = csvData.forEach(function(item, i) {
     	var dataObject = {};
     	var dataRow = item.split(",");
     	for (var data of dataRow) {
     		// resultData.push({test[data]});
-    		// resultData.push() 
+    		// resultData.push()
     		// header = (i === 0) ? : null;
 
-    		dataObject[headerProps[i]] = data;
+    		//dataObject[headerProps[i]] = data;
 
     	}
 
-    	// dataObject -> push to resultData   	
+    	// dataObject -> push to resultData
 
     });
 
