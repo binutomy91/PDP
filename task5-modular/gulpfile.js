@@ -3,6 +3,7 @@ const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const sass = require("gulp-sass");
 const connect = require("gulp-connect");
+const babel = require("babelify");
 const sourcemaps = require('gulp-sourcemaps');
 const config = require("./gulp.config.js");
 
@@ -14,7 +15,7 @@ function copy(settings) {
 }
 
 gulp.task("javascript", function() {
-	return browserify(config.source + "js/index.js")
+	browserify(config.source + "js/index.js", {debug:true})
 		.transform("babelify", {presets: ['es2015']})
 		.bundle()
 		.pipe(source('bundle.js'))
@@ -35,6 +36,11 @@ gulp.task("copy", function() {
 		from: config.source + "images/**/*",
 		to: config.build + "images/"
 	});
+
+	copy({
+		from: config.source + "*.json",
+		to: config.build
+	});
 });
 
 gulp.task("sass", function() {
@@ -50,7 +56,7 @@ gulp.task("sass", function() {
 gulp.task("watch", ["sass", "copy", "javascript"], function() {
 	gulp.watch(config.source + "scss/**/*", ["sass"]);
 	gulp.watch([config.source + "images/**/*", ".src/*.html"], ["copy"]);
-	gulp.watch(config.source + "js/**/*", ["javascript"]);
+	gulp.watch(config.source + "jsx/**/*", ["javascript"]);
 });
 
 gulp.task("connect", function() {
