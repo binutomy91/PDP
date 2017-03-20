@@ -7,10 +7,11 @@ request.onload = function() {
     var csvData =request.responseText.split(";");
     var header = csvData.shift().split(',');
    	var resultData = [];
-  	var dataObject = {};
+  	
 
     var dummyData = csvData.map(function(item, i) {
       header;
+      var dataObject = {};
     	var dataRow = item.split(",");
 
       for (var j = 0; j < dataRow.length; j++) {
@@ -31,7 +32,7 @@ request.onload = function() {
       }
       console.log(dataObject);
 
-      resultData.push(dataObject);
+      return dataObject;
 
     	// dataObject -> push to resultData
 
