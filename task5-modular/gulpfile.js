@@ -3,7 +3,6 @@ const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const sass = require("gulp-sass");
 const connect = require("gulp-connect");
-const babel = require("babelify");
 const sourcemaps = require('gulp-sourcemaps');
 const config = require("./gulp.config.js");
 
@@ -38,9 +37,10 @@ gulp.task("copy", function() {
 	});
 
 	copy({
-		from: config.source + "*.json",
+		from: config.source + "*.csv",
 		to: config.build
 	});
+
 });
 
 gulp.task("sass", function() {
