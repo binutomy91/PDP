@@ -3,8 +3,8 @@ html, body {
 }
 
 body{
-  @include container(80em);
-  background: $secondary-color;
+  @include container(1200px);
+  background: #d1d1d1;
   height: 100vh;
   font-family: 'Myriad Pro';
   color: $secondary-color;

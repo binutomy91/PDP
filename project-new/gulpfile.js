@@ -3,6 +3,7 @@ const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const sass = require("gulp-sass");
 const connect = require("gulp-connect");
+const autoprefixer = require('gulp-autoprefixer');
 const config = require("./gulp.config.js");
 
 
@@ -22,7 +23,7 @@ gulp.task("browserify", function() {
 });
 
 gulp.task("copy", function() {
-	
+
 	// Copy all HTML files
 	copy({
 		from: config.source + "*.html",
@@ -42,6 +43,7 @@ gulp.task("sass", function() {
 	}
 	return gulp.src(config.source + "scss/style.scss")
 		.pipe(sass(options))
+		.pipe(autoprefixer('last 4 versions'))
 		.pipe(gulp.dest(config.build + "css/"))
 		.pipe(connect.reload());
 });

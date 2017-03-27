@@ -1,0 +1,89 @@
+article{
+  width: 100%;
+  background: $secondary-color;
+  color: #c1c1c1;
+  clear: both;
+  float: left;
+
+  h1{
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    color: $lgt-black;
+    font-weight: normal;
+    padding: 10px;
+    @include breakpoint($mobile-landscape) {
+      max-width: 60%;
+    }
+  }
+
+  .side-one{
+    display: inline-block;
+    background: $lgt-gray;
+    padding: 10px 15px;
+    color: #cbcbcb;
+    @include breakpoint($mobile-landscape) {
+      width: 30%;
+      min-height: 280px;
+      margin-left: 10%;
+      float: left;
+      margin-right: 5%;
+      padding: 30px 20px 10px;
+    }
+
+    h1{
+      min-height: 0;
+      color: $lgt-black;
+      display: block;
+      font-size: 20px;
+      font-weight: normal;
+      padding: 0;
+        @include breakpoint($mobile-landscape) {
+          font-size: 22px;
+          word-wrap: break-word;
+          max-width: 90%;
+        }
+    }
+    p{
+      font-size: 12px;
+      @include breakpoint($mobile-landscape) {
+        font-size: 14px;
+      }
+    }
+    .personal-info p{
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+      &:first-child{
+        font-weight: bold;
+      }
+      @include breakpoint($mobile-landscape) {
+        font-size: 14px;
+      }
+    }
+
+  }
+  .side-two{
+    padding: 10px 15px;
+    @include breakpoint($mobile-landscape) {
+      width: 50%;
+      display: inline-block;
+    }
+    h2{
+      font-size: 20px;
+      text-align: center;
+      font-weight: normal;
+      color: lighten($lgt-black,10%);
+      @include breakpoint($mobile-landscape) {
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+
+}
