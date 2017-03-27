@@ -4,7 +4,7 @@ html, body {
 
 body{
   @include container(1200px);
-  background: #d1d1d1;
+  background: $gray;
   height: 100vh;
   font-family: 'Myriad Pro';
   color: $secondary-color;
