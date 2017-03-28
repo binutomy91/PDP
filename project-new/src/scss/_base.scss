@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+}
+
+body{
+  @include container(1200px);
+  background: $gray;
+  height: 100vh;
+  font-family: 'Myriad Pro';
+  color: $secondary-color;
+}
+* {
+  @include border-box-sizing;
+}
+
+a{
+  text-decoration: none;
+}
