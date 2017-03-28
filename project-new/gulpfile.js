@@ -43,7 +43,7 @@ gulp.task("sass", function() {
 	}
 	return gulp.src(config.source + "scss/style.scss")
 		.pipe(sass(options))
-		.pipe(autoprefixer('last 4 versions'))
+		.pipe(autoprefixer('last 5 versions', 'ie 9'))
 		.pipe(gulp.dest(config.build + "css/"))
 		.pipe(connect.reload());
 });

@@ -3,7 +3,9 @@ html, body {
 }
 
 body{
+
   @include container(1200px);
+  
   background: $gray;
   height: 100vh;
   font-family: 'Myriad Pro';

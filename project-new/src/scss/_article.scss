@@ -1,11 +1,11 @@
-article{
+main {
   width: 100%;
   background: $secondary-color;
   color: $alt-gray;
   clear: both;
   float: left;
 
-  h1{
+  h1 {
     display: flex;
     align-items: center;
     min-height: 200px;
@@ -14,16 +14,18 @@ article{
     color: $lgt-black;
     font-weight: normal;
     padding: 10px;
+
     @include breakpoint($mobile-landscape) {
       max-width: 60%;
     }
   }
 
-  .side-one{
+  .side-one {
     display: inline-block;
     background: $lgt-gray;
     padding: 10px 15px;
     color: #cbcbcb;
+
     @include breakpoint($mobile-landscape) {
       width: 30%;
       min-height: 280px;
@@ -33,45 +35,54 @@ article{
       padding: 30px 20px 10px;
     }
 
-    h1{
+    h1 {
       min-height: 0;
       color: $lgt-black;
       display: block;
       font-size: 20px;
       font-weight: normal;
       padding: 0;
-        @include breakpoint($mobile-landscape) {
-          font-size: 22px;
-          word-wrap: break-word;
-          max-width: 90%;
-        }
-    }
-    p{
-      font-size: 12px;
+
       @include breakpoint($mobile-landscape) {
-        font-size: 14px;
-      }
-    }
-    .personal-info p{
-      font-size: 12px;
-      padding: 0;
-      margin: 0;
-      &:first-child{
-        font-weight: bold;
-      }
-      @include breakpoint($mobile-landscape) {
-        font-size: 14px;
+        font-size: 22px;
+        word-wrap: break-word;
+        max-width: 90%;
       }
     }
 
+    p {
+      font-size: 12px;
+
+      @include breakpoint($mobile-landscape) {
+        font-size: 14px;
+      }
+
+    }
+
+    .personal-info p {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+
+      &:first-child {
+        font-weight: bold;
+      }
+
+      @include breakpoint($mobile-landscape) {
+        font-size: 14px;
+      }
+    }
   }
-  .side-two{
+
+  .side-two {
     padding: 10px 15px;
+
     @include breakpoint($mobile-landscape) {
       width: 50%;
       display: inline-block;
     }
-    h2{
+
+    h2 {
       font-size: 20px;
       text-align: center;
       font-weight: normal;
@@ -81,7 +92,8 @@ article{
         text-align: left;
       }
     }
-    p{
+    
+    p {
       font-size: 12px;
     }
   }
