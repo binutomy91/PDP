@@ -1,0 +1,10 @@
+	Name: Binu Tomy
+	Contact: binu_tomy@hotmail.co.uk
+	LinkedIn: https://www.linkedin.com/in/binu-tomy-441bb65a/
+	From: Southend on Sea
+  Github - https://github.com/binutomy91/PDP
+
+/**
+ * Run Npm install
+ * Open browser and go to localhost:8080
+**/

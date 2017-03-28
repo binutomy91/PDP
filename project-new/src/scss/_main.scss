@@ -5,6 +5,10 @@ main {
   clear: both;
   float: left;
 
+  @include breakpoint($tablet-portrait) {
+    padding-bottom: 20px;
+  }
+
   h1 {
     display: flex;
     align-items: center;
@@ -14,9 +18,11 @@ main {
     color: $lgt-black;
     font-weight: normal;
     padding: 10px;
+    font-size: 22px;
 
     @include breakpoint($mobile-landscape) {
       max-width: 60%;
+      font-size: 28px;
     }
   }
 
@@ -92,10 +98,9 @@ main {
         text-align: left;
       }
     }
-    
+
     p {
       font-size: 12px;
     }
   }
-
 }
