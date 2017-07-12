@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+span{
+    display: inline-block;
+    margin: 0.5em;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.card{
+    background: lightgray;
+    border: 1px solid;
+    margin-top: 30px;
+}
+
+.selected{
+    background-color:#eee;
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+.used{
+    background-color: #aaddaa;
+    color: #99bb99;
+}
