@@ -3,6 +3,7 @@ const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const sass = require("gulp-sass");
 const connect = require("gulp-connect");
+const sourcemaps = require('gulp-sourcemaps');
 const config = require("./gulp.config.js");
 
 
@@ -11,6 +12,13 @@ function copy(settings) {
 		.pipe(gulp.dest(settings.to))
 		.pipe(connect.reload());
 }
+
+gulp.task('html', function() {
+	gulp.src(config.source + "*.html")
+		.pipe(gulp.dest(config.build))
+		.pipe(connect.reload());
+  });
+
 
 gulp.task("browserify", function() {
 	return browserify(config.source + "jsx/index.jsx")
@@ -46,10 +54,11 @@ gulp.task("sass", function() {
 		.pipe(connect.reload());
 });
 
-gulp.task("watch", ["sass", "copy", "browserify"], function() {
+gulp.task("watch", ["sass", "copy", "browserify","html"], function() {
 	gulp.watch(config.source + "scss/**/*", ["sass"]);
 	gulp.watch([config.source + "images/**/*", ".src/*.html"], ["copy"]);
 	gulp.watch(config.source + "jsx/**/*", ["browserify"]);
+	gulp.watch(config.source + "*.html", ["html"]);
 });
 
 gulp.task("connect", function() {
