@@ -1,0 +1,29 @@
+{
+    "offers": [
+        {
+            "image" : "./images/spin-win.png",
+            "rating" : 4,
+            "copy" : "<p>100% up to <span> £500 </span> +100 Free Spins</p>",
+            "link" : ""
+        },
+        {
+            "image" : "./images/mansion.png",
+            "rating" : 3,
+            "copy" : "<p>Enjoy up to <span> £200 </span> +20 Free Spins</p>",
+            "link" : ""
+        },
+        {
+            "image" : "./images/spin-win.png",
+            "rating" : 2,
+            "copy" : "<p>Enjoy up to <span> £2 </span> +20 Free Spins</p>",
+            "link" : ""
+        },
+        {
+            "image" : "./images/mansion.png",
+            "rating" : 5,
+            "copy" : "<p>Enjoy up to <span> £10 </span> +20 Free Spins</p>",
+            "link" : ""
+        }
+    ]
+
+}
