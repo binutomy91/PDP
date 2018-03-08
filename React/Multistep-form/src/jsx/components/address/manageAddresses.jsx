@@ -17,10 +17,22 @@ class ManageAddresses extends React.Component{
 		}
     }
 
+    _setAddressState = (event) => {
+        const field = event.target.name;
+        const value = event.target.value;
+
+        console.log(field + " val " + value);
+        this.setState({
+            address : this.state.address
+        })
+    }
+
 
     render() {
         return(
-			<AddressForm address={this.state.address}/>
+            <AddressForm 
+                address={this.state.address}
+                onChange = {this._setAddressState}/>
         )
     }
 }

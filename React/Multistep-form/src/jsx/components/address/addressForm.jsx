@@ -1,45 +1,54 @@
 import React from "react";
+import Input from "../../Utils/textinput.jsx";
 
-const AddressForm = (props) => {
-    return(
-        <div>
-            <div className="form-group row">
-                <label htmlFor="addressLine1" className="col-sm-2 col-form-label">Addres Line 1</label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="Address line 1"/>
-                </div>
+class AddressForm extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+
+        return(
+            <div>
+
+                <Input
+                    name="addLine1"
+                    label="Address Line 1"
+                    placeholder = "Address line 1"
+                    onChange={this.props.onChange}
+                    value={this.props.address.addLine1} />
+
+                <Input
+                    name="addLine2"
+                    label="Address Line 2"
+                    placeholder = "Address line 2"
+                    onChange={this.props.onChange}
+                    value={this.props.address.addLine2} />
+
+                <Input
+                    name="town"
+                    label="Town"
+                    placeholder = "Town"
+                    onChange={this.props.onChange}
+                    value={this.props.address.town} />
+
+                <Input
+                    name="county"
+                    label="County"
+                    placeholder = "County"
+                    onChange={this.props.onChange}
+                    value={this.props.address.county} />
+
+                <Input
+                    name="postCode"
+                    label="Post Code"
+                    placeholder = "Post Code"
+                    onChange={this.props.onChange}
+                    value={this.props.address.postCode} />
+
             </div>
-
-            <div className="form-group row">
-                <label htmlFor="addressLine2" className="col-sm-2 col-form-label">Addres Line 2</label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="Address line 2"/>
-                </div>
-            </div>
-
-            <div className="form-group row">
-                <label htmlFor="city" className="col-sm-2 col-form-label">City / Town</label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="City"/>
-                </div>
-            </div>
-
-            <div className="form-group row">
-                <label htmlFor="county" className="col-sm-2 col-form-label">County</label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="County"/>
-                </div>
-            </div>
-
-            <div className="form-group row">
-                <label htmlFor="postcode" className="col-sm-2 col-form-label">Postcode</label>
-                <div className="col-sm-10">
-                    <input type="text" className="form-control" placeholder="Postcode"/>
-                </div>
-            </div>
-
-        </div>
-    )
+        )
+    }
 }
 
 export default AddressForm;
