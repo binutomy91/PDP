@@ -1,45 +1,37 @@
 import React from 'react';
+import Input from "../../Utils/textinput.jsx";
 
-const PersonalForm = (props) => {
-    return(
-        <div>
-            <div className="form-group row">
-                <label htmlFor="exampleInputEmail1" className="col-sm-2 col-form-label">Email address</label>
-                <div className="col-sm-10">
-                    <input type="email" 
-                        className="form-control" 
-                        placeholder="Email"
+class PersonalForm extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    render() {
+        return(
+            <div>
+                <Input
                         name="email"
-                        onChange={props.onChange}
-                        value={props.personal.email}/>
-                </div>
-            </div>
-
-            <div className="form-group row">
-                <label htmlFor="firstName" className="col-sm-2 col-form-label">First Name</label>
-                <div className="col-sm-10">
-                    <input type="text" 
-                        className="form-control" 
-                        placeholder="First name"
+                        label="Email"
+                        placeholder = "Email"
+                        onChange={this.props.onChange}
+                        value={this.props.personal.email} />
+    
+                <Input
                         name="firstName"
-                        onChange={props.onChange}
-                        value={props.personal.firstName}/>
-                    </div>
-            </div>
-
-            <div className="form-group row">
-                <label htmlFor="lastName" className="col-sm-2 col-form-label">Last Name</label>
-                <div className="col-sm-10">
-                    <input type="text" 
-                        className="form-control" 
-                        placeholder="Last name"
+                        label="First Name"
+                        placeholder = "First Name"
+                        onChange={this.props.onChange}
+                        value={this.props.personal.firstName} />
+                
+                <Input
                         name="lastName"
-                        onChange={props.onChange}
-                        value={props.personal.lastName}/>
-                </div>
+                        label="Last Name"
+                        placeholder = "Last Name"
+                        onChange={this.props.onChange}
+                        value={this.props.personal.lastName} />
             </div>
-        </div>
-    )
+        )
+    }
+     
 }
 
 export default PersonalForm;

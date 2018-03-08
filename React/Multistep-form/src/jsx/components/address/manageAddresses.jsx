@@ -21,10 +21,10 @@ class ManageAddresses extends React.Component{
         const field = event.target.name;
         const value = event.target.value;
 
-        console.log(field + " val " + value);
+        this.state.address[field] = value;
         this.setState({
             address : this.state.address
-        })
+		})
     }
 
 

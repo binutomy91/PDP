@@ -22,10 +22,7 @@ class ManagePersonal extends React.Component{
         this.setState({
             personal : this.state.personal
 		})
-		
-		console.log("Email " + this.state.personal.email);
-		console.log("Fname " + this.state.personal.firstName);
-		console.log("Lname " + this.state.personal.lastName);
+		console.log(this.state.personal);
     }
 
 
